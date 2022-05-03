@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.css"
+            integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Jost&family=Permanent+Marker&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+        <title>Audio Box</title>
+    </head>
+    <body>
+        <audio src="./audio/mirror.wav"></audio>
+            <button
+                class="btn"
+                data-playing="false"
+                role="switch"
+                aria-checked="false"
+            >
+                <span>Play/Pause</span>
+            </button>
+        <br />
+        <div class="unit">
+            <h1>Boddington Box</h1>
+            <canvas class="display" id="visualizer"></canvas>
+            <div class="controls">
+                <div class="slider-wrapper">
+                    <div id="slider-gain"></div>
+                    <p class="label">Vol.</p>
+                </div>
+                <div class="slider-wrapper">
+                    <div id="slider-eq1"></div>
+                    <p class="label">EQ-G</p>
+                </div>
+                <div class="slider-wrapper">
+                    <div id="slider-eq2"></div>
+                    <p class="label">EQ-F</p>
+                </div>
+                <br />
+                <div class="knob-input">
+                    <div class="knob-input__visual"></div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
